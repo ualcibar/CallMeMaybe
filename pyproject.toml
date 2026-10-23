@@ -1,0 +1,30 @@
+[project]
+    version = "2026.10.22"
+    name = "call-me-maybe"
+    requires-python = ">= 3.10"
+    authors = [
+        {name = "Unai Alcibar-Arechuluaga", email = "ualcibar11@gmail.com"}
+        ]
+    readme = "README.md"
+    description = "This project introduces function calling in Large Language Models by building a system that translates natural language prompts into structured function calls with typed arguments. You'll implement constrained decoding to guarantee valid JSON output, achieving near-perfect reliability with a small 0.5B parameter model, bridging the gap between human language and computer-executable operations."
+
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0",
+    "numpy>=1.26.0",
+]
+
+[build-system]
+    requires = ["setuptools>=61.0.0"]
+    build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "auto-typing-final",
+    "community-of-python-flake8-plugin",
+    "flake8-pyproject",
+    "mypy",
+    "pytest",
+    #"pytest-cov",
+    #"ruff",
+]
